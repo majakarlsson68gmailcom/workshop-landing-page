@@ -54,6 +54,7 @@ header {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
   padding: 13px;
+    transition: background-color 0.3s ease;
 }
 
 .buttons:hover {
@@ -189,6 +190,7 @@ header {
 
 /* Sektion bilmodeller */
 
+
 .grid-container {
   margin-inline: auto;
   display: grid;
@@ -239,7 +241,7 @@ header {
   flex-direction: column;
   min-height: 500px;
   padding: 64px;
-  grid-column: span 2;
+  grid-column: 1 / -1;
   background-image: url(https://www.volvocars.com/images/cs/v3/assets/blt618dcb179a89242d/bltbbadae7834a7a9a8/69a95b671a826d8383746428/EX60_Accessory_Roof_Carrier-21-9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=3840);
   background-size: cover;
 }
@@ -270,18 +272,202 @@ header {
 
 
 /* Volvo-car Slider */
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(220, 216, 216, 0.2);
+  margin: 80px 0px 0px 0px;
+}
 
 .slider-top {
   display: flex;
   justify-content: space-between;
 }
 
+.slider-text {
+  padding: 40px 0px 0px 40px;
+  font-family: Helvetica, sans-serif;
+}
+
+.slider-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+.slider-subtitle {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 8px;
+}
+
+.explore-btn {
+  margin-top: 16px;
+  padding: 14px 25px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.slider-pointers {
+  padding: 40px 60px 0px 0px;
+}
+
+.slider-btns {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(220, 216, 216, 0.369);
+  border-radius: 50%;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: lighter;
+    transition: background-color 0.3s ease;
+
+}
+
+.slider-btns:hover {
+  background-color: rgb(177, 172, 172);
+}
+
 .slider-btm {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 60vh;
+}
+
+.volvo-cars {
+  display: flex;
+  justify-content: space-between;
 }
 
 .volvo-car1 {
-  width: 800px;
+  width: 700px;
+  margin-left: 610px;
+}
+
+.volvo-car2 {
+  width: 500px;
+
+}
+
+.volvo-2 {
+    margin-left: 110px;
+  }
+
+  .volvo-2 img {
+    overflow: hidden;
+    width: 500px;
+    height: 200px;
+    object-fit: ;
+  }
+
+.slider-line {
+  margin-top: 60px;
+  width: 90%;
+  height: 2px;
+  background-color: rgb(204, 200, 200);
+  border: none;
+  cursor: pointer;
+}
+
+.slider-btm-text {
+  margin-top: 30px;
+  color: black;
+}
+
+/* Media Querries */
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+/* section for life */
+
+.for-life-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1300px;
+ padding: 64px 32px;
+  margin-inline: auto;
+
+  h2 {
+    flex-basis: 100%;
+    margin-bottom: 32px;
+  }
+
+  .flex-article{
+    flex: 1 1;
+    background-color: rgb(248, 248, 248);
+  }
+
+  .article-text {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  p {
+    line-height: 1.5;
+    color: rgb(121, 120, 120);
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+}
+
+.article-text:hover {
+  background-color: rgb(211, 208, 208);
+}
+
+/* Sista sektionen */
+.flex-content {
+  display: flex;
+  margin-bottom: 80px;
+  max-width: 1300px;
+  margin-inline: auto;
+  img {
+    flex: 1;
+    min-width: 0;
+    object-fit: cover;
+    aspect-ratio: 16 / 12;
+  }
+  .text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 32px 64px;
+    background-color: rgb(248, 248, 248);
+  }
+
+  a {
+    color: black;
+  }
+  p {
+    line-height: 1.5;
+    color: rgb(121, 120, 120);
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
 }
